@@ -97,7 +97,8 @@
                         complete: function(results) {
                             const productList = document.getElementById('product-list');
                             let currentCategory = "";
-                            results.data.forEach(product => {
+                            const products = results.data.filter(product => product.id);
+                            products.forEach(product => {
                                 if (product.category && product.category !== currentCategory) {
                                     currentCategory = product.category;
                                     const categoryRow = document.createElement('tr');
