@@ -10,6 +10,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Papa Parse CSV Parser -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/papaparse/5.3.2/papaparse.min.js"></script>
     <style>
         /* Custom font for the body */
         body {
@@ -87,33 +89,40 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            fetch('products.json')
-                .then(response => response.json())
-                .then(data => {
-                    const productList = document.getElementById('product-list');
-                    data.categories.forEach(category => {
-                        const categoryRow = document.createElement('tr');
-                        categoryRow.className = 'bg-purple-800/80 font-semibold text-white';
-                        categoryRow.innerHTML = `<td colspan="6" class="p-3">${category.name}</td>`;
-                        productList.appendChild(categoryRow);
+            fetch('products.csv')
+                .then(response => response.text())
+                .then(csvText => {
+                    Papa.parse(csvText, {
+                        header: true,
+                        complete: function(results) {
+                            const productList = document.getElementById('product-list');
+                            let currentCategory = "";
+                            results.data.forEach(product => {
+                                if (product.category && product.category !== currentCategory) {
+                                    currentCategory = product.category;
+                                    const categoryRow = document.createElement('tr');
+                                    categoryRow.className = 'bg-purple-800/80 font-semibold text-white';
+                                    categoryRow.innerHTML = `<td colspan="6" class="p-3">${currentCategory}</td>`;
+                                    productList.appendChild(categoryRow);
+                                }
 
-                        category.products.forEach(product => {
-                            const productRow = document.createElement('tr');
-                            productRow.className = 'product-row border-b border-slate-700 hover:bg-slate-700/50';
-                            productRow.innerHTML = `
-                                <td class="index-number p-3 text-center font-bold text-amber-400">${product.id}</td>
-                                <td class="item-name p-3">${product.name}<br><span class="text-sm text-gray-400">${product.tamil_name}</span></td>
-                                <td class="p-3 hidden md:table-cell">${product.min_order}</td>
-                                <td class="price p-3 text-center">${product.price}</td>
-                                <td class="p-3 text-center">
-                                    <input type="number" class="qty w-16 bg-slate-200 text-slate-900 text-center rounded-md p-1" min="0" oninput="calculateTotal()">
-                                </td>
-                                <td class="total-cell p-3 text-right font-bold text-yellow-400">₹0</td>
-                            `;
-                            productList.appendChild(productRow);
-                        });
+                                const productRow = document.createElement('tr');
+                                productRow.className = 'product-row border-b border-slate-700 hover:bg-slate-700/50';
+                                productRow.innerHTML = `
+                                    <td class="index-number p-3 text-center font-bold text-amber-400">${product.id}</td>
+                                    <td class="item-name p-3">${product.name}<br><span class="text-sm text-gray-400">${product.tamil_name}</span></td>
+                                    <td class="p-3 hidden md:table-cell">${product.min_order}</td>
+                                    <td class="price p-3 text-center">${product.price}</td>
+                                    <td class="p-3 text-center">
+                                        <input type="number" class="qty w-16 bg-slate-200 text-slate-900 text-center rounded-md p-1" min="0" oninput="calculateTotal()">
+                                    </td>
+                                    <td class="total-cell p-3 text-right font-bold text-yellow-400">₹0</td>
+                                `;
+                                productList.appendChild(productRow);
+                            });
+                            calculateTotal(); // Initial calculation
+                        }
                     });
-                    calculateTotal(); // Initial calculation
                 });
         });
 
