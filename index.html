@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VJ TRADERS | Diwali Fireworks Price List 2025</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Custom font for the body */
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        /* Style for number input arrows */
+        input[type=number]::-webkit-inner-spin-button,
+        input[type=number]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        input[type=number] {
+            -moz-appearance: textfield;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-gray-200 p-4 sm:p-6 md:p-8">
+
+    <main class="max-w-4xl mx-auto bg-slate-800/50 rounded-2xl shadow-2xl p-6 sm:p-8 border border-slate-700">
+
+        <!-- Header -->
+        <header class="text-center mb-8">
+            <h1 class="text-3xl sm:text-4xl font-bold text-white tracking-wider" style="text-shadow: 0 0 15px #f59e0b;">
+                VJ TRADERS
+            </h1>
+            <p class="text-yellow-400 text-lg">Diwali Fireworks Price List 2025</p>
+        </header>
+
+        <!-- Products Table -->
+        <div class="overflow-x-auto rounded-lg border border-slate-700">
+            <table class="w-full text-sm sm:text-base">
+                <thead class="bg-amber-600 text-slate-900 uppercase">
+                    <tr>
+                        <th class="p-3 text-center">No.</th>
+                        <th class="p-3 text-left">Item Name</th>
+                        <th class="p-3 text-left hidden md:table-cell">Min Order</th>
+                        <th class="p-3 text-center">Price</th>
+                        <th class="p-3 text-center">Qty</th>
+                        <th class="p-3 text-right">Total</th>
+                    </tr>
+                </thead>
+                <tbody id="product-list">
+                    <!-- Category Header -->
+                    <tr class="bg-purple-800/80 font-semibold text-white">
+                        <td colspan="6" class="p-3">A - SINGLE SHOT CRACKER</td>
+                    </tr>
+                    <!-- Product Row -->
+                    <tr class="product-row border-b border-slate-700 hover:bg-slate-700/50">
+                        <td class="index-number p-3 text-center font-bold text-amber-400">1</td>
+                        <td class="item-name p-3">PAPER SUPER BLASTER</td>
+                        <td class="p-3 hidden md:table-cell">1 BOX (10 PCS)</td>
+                        <td class="price p-3 text-center">400</td>
+                        <td class="p-3 text-center">
+                            <input type="number" class="qty w-16 bg-slate-200 text-slate-900 text-center rounded-md p-1" min="0" oninput="calculateTotal()">
+                        </td>
+                        <td class="total-cell p-3 text-right font-bold text-yellow-400">₹0</td>
+                    </tr>
+                    <tr class="product-row border-b border-slate-700 hover:bg-slate-700/50">
+                        <td class="index-number p-3 text-center font-bold text-amber-400">2</td>
+                        <td class="item-name p-3">WONDER THROW</td>
+                        <td class="p-3 hidden md:table-cell">1 BOX (10 BOXES)</td>
+                        <td class="price p-3 text-center">100</td>
+                        <td class="p-3 text-center">
+                            <input type="number" class="qty w-16 bg-slate-200 text-slate-900 text-center rounded-md p-1" min="0" oninput="calculateTotal()">
+                        </td>
+                        <td class="total-cell p-3 text-right font-bold text-yellow-400">₹0</td>
+                    </tr>
+                    <tr class="product-row border-b border-slate-700 hover:bg-slate-700/50">
+                        <td class="index-number p-3 text-center font-bold text-amber-400">3</td>
+                        <td class="item-name p-3">POP POP CRACKER</td>
+                        <td class="p-3 hidden md:table-cell">1 BOX (50 BOXES)</td>
+                        <td class="price p-3 text-center">350</td>
+                        <td class="p-3 text-center">
+                            <input type="number" class="qty w-16 bg-slate-200 text-slate-900 text-center rounded-md p-1" min="0" oninput="calculateTotal()">
+                        </td>
+                        <td class="total-cell p-3 text-right font-bold text-yellow-400">₹0</td>
+                    </tr>
+
+                    <!-- Category Header -->
+                    <tr class="bg-purple-800/80 font-semibold text-white">
+                        <td colspan="6" class="p-3">BB - WALA LAR GARLAND</td>
+                    </tr>
+                    <tr class="product-row border-b border-slate-700 hover:bg-slate-700/50">
+                        <td class="index-number p-3 text-center font-bold text-amber-400">4</td>
+                        <td class="item-name p-3">1000 WALA SUPER BLASTER</td>
+                        <td class="p-3 hidden md:table-cell">1 BOX (1 PCS)</td>
+                        <td class="price p-3 text-center">300</td>
+                        <td class="p-3 text-center">
+                            <input type="number" class="qty w-16 bg-slate-200 text-slate-900 text-center rounded-md p-1" min="0" oninput="calculateTotal()">
+                        </td>
+                        <td class="total-cell p-3 text-right font-bold text-yellow-400">₹0</td>
+                    </tr>
+                    <tr class="product-row border-b border-slate-700 hover:bg-slate-700/50">
+                        <td class="index-number p-3 text-center font-bold text-amber-400">5</td>
+                        <td class="item-name p-3">2000 WALA SUPER BLASTER</td>
+                        <td class="p-3 hidden md:table-cell">1 BOX (1 PCS)</td>
+                        <td class="price p-3 text-center">600</td>
+                        <td class="p-3 text-center">
+                            <input type="number" class="qty w-16 bg-slate-200 text-slate-900 text-center rounded-md p-1" min="0" oninput="calculateTotal()">
+                        </td>
+                        <td class="total-cell p-3 text-right font-bold text-yellow-400">₹0</td>
+                    </tr>
+                    <tr class="product-row border-b border-slate-700 hover:bg-slate-700/50">
+                        <td class="index-number p-3 text-center font-bold text-amber-400">6</td>
+                        <td class="item-name p-3">5000 WALA SUPER BLASTER</td>
+                        <td class="p-3 hidden md:table-cell">1 BOX (1 PCS)</td>
+                        <td class="price p-3 text-center">1500</td>
+                        <td class="p-3 text-center">
+                            <input type="number" class="qty w-16 bg-slate-200 text-slate-900 text-center rounded-md p-1" min="0" oninput="calculateTotal()">
+                        </td>
+                        <td class="total-cell p-3 text-right font-bold text-yellow-400">₹0</td>
+                    </tr>
+
+                    <!-- Category Header -->
+                    <tr class="bg-purple-800/80 font-semibold text-white">
+                        <td colspan="6" class="p-3">C - HI-QUALITY SPARKLERS</td>
+                    </tr>
+                     <tr class="product-row border-b border-slate-700 hover:bg-slate-700/50">
+                        <td class="index-number p-3 text-center font-bold text-amber-400">7</td>
+                        <td class="item-name p-3">30 CM MILLENNIUM MIX</td>
+                        <td class="p-3 hidden md:table-cell">2 BOX (5+5 PCS)</td>
+                        <td class="price p-3 text-center">250</td>
+                        <td class="p-3 text-center">
+                            <input type="number" class="qty w-16 bg-slate-200 text-slate-900 text-center rounded-md p-1" min="0" oninput="calculateTotal()">
+                        </td>
+                        <td class="total-cell p-3 text-right font-bold text-yellow-400">₹0</td>
+                    </tr>
+                     <tr class="product-row border-b border-slate-700 hover:bg-slate-700/50">
+                        <td class="index-number p-3 text-center font-bold text-amber-400">8</td>
+                        <td class="item-name p-3">50 CM MIX TRIX</td>
+                        <td class="p-3 hidden md:table-cell">1 BOX(5 PCS)</td>
+                        <td class="price p-3 text-center">350</td>
+                        <td class="p-3 text-center">
+                            <input type="number" class="qty w-16 bg-slate-200 text-slate-900 text-center rounded-md p-1" min="0" oninput="calculateTotal()">
+                        </td>
+                        <td class="total-cell p-3 text-right font-bold text-yellow-400">₹0</td>
+                    </tr>
+                     <tr class="product-row border-b border-slate-700 hover:bg-slate-700/50">
+                        <td class="index-number p-3 text-center font-bold text-amber-400">9</td>
+                        <td class="item-name p-3">75 CM MIX MATRIX</td>
+                        <td class="p-3 hidden md:table-cell">1 BOX (5 PCS)</td>
+                        <td class="price p-3 text-center">450</td>
+                        <td class="p-3 text-center">
+                            <input type="number" class="qty w-16 bg-slate-200 text-slate-900 text-center rounded-md p-1" min="0" oninput="calculateTotal()">
+                        </td>
+                        <td class="total-cell p-3 text-right font-bold text-yellow-400">₹0</td>
+                    </tr>
+
+                    <!-- Category Header -->
+                    <tr class="bg-purple-800/80 font-semibold text-white">
+                        <td colspan="6" class="p-3">D - GROUND CHAKKER</td>
+                    </tr>
+                    <tr class="product-row border-b border-slate-700 hover:bg-slate-700/50">
+                        <td class="index-number p-3 text-center font-bold text-amber-400">10</td>
+                        <td class="item-name p-3">CHAKKER SPECIAL</td>
+                        <td class="p-3 hidden md:table-cell">1 BOX (10 PCS)</td>
+                        <td class="price p-3 text-center">175</td>
+                        <td class="p-3 text-center">
+                            <input type="number" class="qty w-16 bg-slate-200 text-slate-900 text-center rounded-md p-1" min="0" oninput="calculateTotal()">
+                        </td>
+                        <td class="total-cell p-3 text-right font-bold text-yellow-400">₹0</td>
+                    </tr>
+                    <tr class="product-row border-b border-slate-700 hover:bg-slate-700/50">
+                        <td class="index-number p-3 text-center font-bold text-amber-400">11</td>
+                        <td class="item-name p-3">CHAKKER DELUXE</td>
+                        <td class="p-3 hidden md:table-cell">1 BOX (10 PCS)</td>
+                        <td class="price p-3 text-center">250</td>
+                        <td class="p-3 text-center">
+                            <input type="number" class="qty w-16 bg-slate-200 text-slate-900 text-center rounded-md p-1" min="0" oninput="calculateTotal()">
+                        </td>
+                        <td class="total-cell p-3 text-right font-bold text-yellow-400">₹0</td>
+                    </tr>
+                    <tr class="product-row border-b border-slate-700 hover:bg-slate-700/50">
+                        <td class="index-number p-3 text-center font-bold text-amber-400">12</td>
+                        <td class="item-name p-3">WIRE CHAKKER</td>
+                        <td class="p-3 hidden md:table-cell">1 BOX (10 PCS)</td>
+                        <td class="price p-3 text-center">250</td>
+                        <td class="p-3 text-center">
+                            <input type="number" class="qty w-16 bg-slate-200 text-slate-900 text-center rounded-md p-1" min="0" oninput="calculateTotal()">
+                        </td>
+                        <td class="total-cell p-3 text-right font-bold text-yellow-400">₹0</td>
+                    </tr>
+
+                    <!-- Category Header -->
+                    <tr class="bg-purple-800/80 font-semibold text-white">
+                        <td colspan="6" class="p-3">E - HAND HELD FIREWORKS</td>
+                    </tr>
+                    <tr class="product-row border-b border-slate-700 hover:bg-slate-700/50">
+                        <td class="index-number p-3 text-center font-bold text-amber-400">13</td>
+                        <td class="item-name p-3">TWINKLING STAR LONG SIZE</td>
+                        <td class="p-3 hidden md:table-cell">1 BOX(10 PCS)</td>
+                        <td class="price p-3 text-center">200</td>
+                        <td class="p-3 text-center">
+                            <input type="number" class="qty w-16 bg-slate-200 text-slate-900 text-center rounded-md p-1" min="0" oninput="calculateTotal()">
+                        </td>
+                        <td class="total-cell p-3 text-right font-bold text-yellow-400">₹0</td>
+                    </tr>
+                    <tr class="product-row border-b border-slate-700 hover:bg-slate-700/50">
+                        <td class="index-number p-3 text-center font-bold text-amber-400">14</td>
+                        <td class="item-name p-3">1 GUN & 10 RING CAPS PACK</td>
+                        <td class="p-3 hidden md:table-cell">1 PACK (5 NOS)</td>
+                        <td class="price p-3 text-center">250</td>
+                        <td class="p-3 text-center">
+                            <input type="number" class="qty w-16 bg-slate-200 text-slate-900 text-center rounded-md p-1" min="0" oninput="calculateTotal()">
+                        </td>
+                        <td class="total-cell p-3 text-right font-bold text-yellow-400">₹0</td>
+                    </tr>
+                    <tr class="product-row border-b border-slate-700 hover:bg-slate-700/50">
+                        <td class="index-number p-3 text-center font-bold text-amber-400">15</td>
+                        <td class="item-name p-3">ROMAN CANDLE</td>
+                        <td class="p-3 hidden md:table-cell">1 PC</td>
+                        <td class="price p-3 text-center">200</td>
+                        <td class="p-3 text-center">
+                            <input type="number" class="qty w-16 bg-slate-200 text-slate-900 text-center rounded-md p-1" min="0" oninput="calculateTotal()">
+                        </td>
+                        <td class="total-cell p-3 text-right font-bold text-yellow-400">₹0</td>
+                    </tr>
+                    <tr class="product-row border-b border-slate-700 hover:bg-slate-700/50">
+                        <td class="index-number p-3 text-center font-bold text-amber-400">16</td>
+                        <td class="item-name p-3">288 HAND SHOT</td>
+                        <td class="p-3 hidden md:table-cell">1 PC</td>
+                        <td class="price p-3 text-center">1500</td>
+                        <td class="p-3 text-center">
+                            <input type="number" class="qty w-16 bg-slate-200 text-slate-900 text-center rounded-md p-1" min="0" oninput="calculateTotal()">
+                        </td>
+                        <td class="total-cell p-3 text-right font-bold text-yellow-400">₹0</td>
+                    </tr>
+                    <tr class="product-row border-b border-slate-700 hover:bg-slate-700/50">
+                        <td class="index-number p-3 text-center font-bold text-amber-400">17</td>
+                        <td class="item-name p-3">888 HAND SHOT</td>
+                        <td class="p-3 hidden md:table-cell">1 PC</td>
+                        <td class="price p-3 text-center">2000</td>
+                        <td class="p-3 text-center">
+                            <input type="number" class="qty w-16 bg-slate-200 text-slate-900 text-center rounded-md p-1" min="0" oninput="calculateTotal()">
+                        </td>
+                        <td class="total-cell p-3 text-right font-bold text-yellow-400">₹0</td>
+                    </tr>
+
+                    <!-- Category Header -->
+                    <tr class="bg-purple-800/80 font-semibold text-white">
+                        <td colspan="6" class="p-3">F - FLOWER POT</td>
+                    </tr>
+                     <tr class="product-row border-b border-slate-700 hover:bg-slate-700/50">
+                        <td class="index-number p-3 text-center font-bold text-amber-400">18</td>
+                        <td class="item-name p-3">FLOWERPOT SPL</td>
+                        <td class="p-3 hidden md:table-cell">1 BOX (10 PCS)</td>
+                        <td class="price p-3 text-center">200</td>
+                        <td class="p-3 text-center">
+                            <input type="number" class="qty w-16 bg-slate-200 text-slate-900 text-center rounded-md p-1" min="0" oninput="calculateTotal()">
+                        </td>
+                        <td class="total-cell p-3 text-right font-bold text-yellow-400">₹0</td>
+                    </tr>
+                     <tr class="product-row border-b border-slate-700 hover:bg-slate-700/50">
+                        <td class="index-number p-3 text-center font-bold text-amber-400">19</td>
+                        <td class="item-name p-3">COLOUR KOTI</td>
+                        <td class="p-3 hidden md:table-cell">1 BOX (10 PCS)</td>
+                        <td class="price p-3 text-center">350</td>
+                        <td class="p-3 text-center">
+                            <input type="number" class="qty w-16 bg-slate-200 text-slate-900 text-center rounded-md p-1" min="0" oninput="calculateTotal()">
+                        </td>
+                        <td class="total-cell p-3 text-right font-bold text-yellow-400">₹0</td>
+                    </tr>
+                     <tr class="product-row border-b border-slate-700 hover:bg-slate-700/50">
+                        <td class="index-number p-3 text-center font-bold text-amber-400">20</td>
+                        <td class="item-name p-3">COLOUR KOTI DELUXE (SUPER SIZE)</td>
+                        <td class="p-3 hidden md:table-cell">1 BOX (10 PCS)</td>
+                        <td class="price p-3 text-center">450</td>
+                        <td class="p-3 text-center">
+                            <input type="number" class="qty w-16 bg-slate-200 text-slate-900 text-center rounded-md p-1" min="0" oninput="calculateTotal()">
+                        </td>
+                        <td class="total-cell p-3 text-right font-bold text-yellow-400">₹0</td>
+                    </tr>
+
+                    <!-- Category Header -->
+                    <tr class="bg-purple-800/80 font-semibold text-white">
+                        <td colspan="6" class="p-3">G - MEGA HEIGHT SINGLE SHOT SKY JUMPER</td>
+                    </tr>
+                    <tr class="product-row border-b border-slate-700 hover:bg-slate-700/50">
+                        <td class="index-number p-3 text-center font-bold text-amber-400">21</td>
+                        <td class="item-name p-3">3.5" MEGA HEIGHT SKY JUMPER</td>
+                        <td class="p-3 hidden md:table-cell">1 BOX (1 PC)</td>
+                        <td class="price p-3 text-center">300</td>
+                        <td class="p-3 text-center">
+                            <input type="number" class="qty w-16 bg-slate-200 text-slate-900 text-center rounded-md p-1" min="0" oninput="calculateTotal()">
+                        </td>
+                        <td class="total-cell p-3 text-right font-bold text-yellow-400">₹0</td>
+                    </tr>
+                    <tr class="product-row border-b border-slate-700 hover:bg-slate-700/50">
+                        <td class="index-number p-3 text-center font-bold text-amber-400">22</td>
+                        <td class="item-name p-3">SONY 4" MEGA HEIGHT SKY JUMPER</td>
+                        <td class="p-3 hidden md:table-cell">1 BOX (2 PC)</td>
+                        <td class="price p-3 text-center">1100</td>
+                        <td class="p-3 text-center">
+                            <input type="number" class="qty w-16 bg-slate-200 text-slate-900 text-center rounded-md p-1" min="0" oninput="calculateTotal()">
+                        </td>
+                        <td class="total-cell p-3 text-right font-bold text-yellow-400">₹0</td>
+                    </tr>
+                    <tr class="product-row border-b border-slate-700 hover:bg-slate-700/50">
+                        <td class="index-number p-3 text-center font-bold text-amber-400">23</td>
+                        <td class="item-name p-3">SONY 5" MEGA HEIGHT SKY JUMPER</td>
+                        <td class="p-3 hidden md:table-cell">1 BOX (2 PC)</td>
+                        <td class="price p-3 text-center">1250</td>
+                        <td class="p-3 text-center">
+                            <input type="number" class="qty w-16 bg-slate-200 text-slate-900 text-center rounded-md p-1" min="0" oninput="calculateTotal()">
+                        </td>
+                        <td class="total-cell p-3 text-right font-bold text-yellow-400">₹0</td>
+                    </tr>
+
+                    <!-- Category Header -->
+                    <tr class="bg-purple-800/80 font-semibold text-white">
+                        <td colspan="6" class="p-3">H - MEGA HEIGHT MULTI SHOTS</td>
+                    </tr>
+                    <tr class="product-row border-b border-slate-700 hover:bg-slate-700/50">
+                        <td class="index-number p-3 text-center font-bold text-amber-400">24</td>
+                        <td class="item-name p-3">10 MULTI SHOTS MEGA SIZE</td>
+                        <td class="p-3 hidden md:table-cell">1 CARTON (1 PC)</td>
+                        <td class="price p-3 text-center">6000</td>
+                        <td class="p-3 text-center">
+                            <input type="number" class="qty w-16 bg-slate-200 text-slate-900 text-center rounded-md p-1" min="0" oninput="calculateTotal()">
+                        </td>
+                        <td class="total-cell p-3 text-right font-bold text-yellow-400">₹0</td>
+                    </tr>
+                    <tr class="product-row border-b-0 hover:bg-slate-700/50">
+                        <td class="index-number p-3 text-center font-bold text-amber-400">25</td>
+                        <td class="item-name p-3">24 MULTI SHOTS MEGA SIZE</td>
+                        <td class="p-3 hidden md:table-cell">1 CARTON (1 PC)</td>
+                        <td class="price p-3 text-center">12500</td>
+                        <td class="p-3 text-center">
+                            <input type="number" class="qty w-16 bg-slate-200 text-slate-900 text-center rounded-md p-1" min="0" oninput="calculateTotal()">
+                        </td>
+                        <td class="total-cell p-3 text-right font-bold text-yellow-400">₹0</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Grand Total -->
+        <div class="mt-6 text-right">
+            <p class="text-xl sm:text-2xl font-bold text-amber-400">
+                TOTAL (NET PRICE): <span id="grand-total" class="text-white">₹0</span>
+            </p>
+        </div>
+
+        <!-- WhatsApp Button -->
+        <div class="my-8 text-center">
+            <a href="#" id="whatsapp-link" target="_blank" class="inline-block bg-green-500 text-white font-bold text-lg px-8 py-4 rounded-full shadow-lg hover:bg-green-600 transition-all duration-300 transform hover:scale-105">
+                Confirm & Send Order on WhatsApp
+            </a>
+        </div>
+
+        <!-- Terms and Conditions -->
+        <footer class="mt-8 border-t-2 border-slate-700 pt-6 text-slate-400 text-sm">
+            <h2 class="text-lg font-semibold text-amber-400 mb-2">Terms & Conditions:</h2>
+            <ul class="space-y-2">
+                <li class="flex items-start"><span class="mr-2">🎇</span>All orders based on full payment on first-in-first-out basis.</li>
+                <li class="flex items-start"><span class="mr-2">🎇</span>No advance booking or discount.</li>
+                <li class="flex items-start"><span class="mr-2">🎇</span>Feedback welcome at WhatsApp: 9940651702.</li>
+                <li class="flex items-start"><span class="mr-2">🎇</span>We do fireworks displays for temple festivals, weddings, birthdays & more.</li>
+            </ul>
+            <p class="text-center mt-6 font-bold text-lg text-amber-400">PLAY SAFE & HAVE A HAPPY DIWALI!</p>
+        </footer>
+
+    </main>
+
+    <script>
+        function calculateTotal() {
+            let grandTotal = 0;
+            const rows = document.querySelectorAll('.product-row');
+            let orderMessage = "🎉 Hello VJ Traders! I would like to place an order for the following fireworks:\n\n";
+            let hasItems = false;
+
+            rows.forEach(row => {
+                const priceElement = row.querySelector('.price');
+                const qtyElement = row.querySelector('.qty');
+                const totalElement = row.querySelector('.total-cell');
+                const itemNameElement = row.querySelector('.item-name');
+                const indexElement = row.querySelector('.index-number');
+
+                if (priceElement && qtyElement && totalElement && itemNameElement && indexElement) {
+                    const price = parseFloat(priceElement.textContent);
+                    const qty = parseInt(qtyElement.value) || 0;
+                    const total = price * qty;
+                    totalElement.textContent = `₹${total}`;
+                    grandTotal += total;
+
+                    if (qty > 0) {
+                        hasItems = true;
+                        const index = indexElement.textContent.trim();
+                        const itemName = itemNameElement.textContent.trim();
+                        orderMessage += `*${index}. ${itemName}*\n- Quantity: ${qty}\n\n`;
+                    }
+                }
+            });
+
+            document.getElementById('grand-total').textContent = `₹${grandTotal}`;
+
+            const whatsappLink = document.getElementById('whatsapp-link');
+            if (hasItems) {
+                orderMessage += `*GRAND TOTAL: ₹${grandTotal}*\n\n(This order was generated from your website)`;
+                const phoneNumber = "919940651702";
+                const encodedMessage = encodeURIComponent(orderMessage);
+                const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+                whatsappLink.href = whatsappURL;
+                whatsappLink.classList.remove('opacity-50', 'cursor-not-allowed');
+            } else {
+                whatsappLink.href = "#";
+                whatsappLink.classList.add('opacity-50', 'cursor-not-allowed');
+            }
+        }
+
+        // Run on page load to set the initial state of the WhatsApp button
+        window.onload = calculateTotal;
+    </script>
+
+</body>
+</html>
