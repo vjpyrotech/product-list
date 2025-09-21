@@ -89,7 +89,7 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            fetch('products.csv')
+            fetch('https://docs.google.com/spreadsheets/d/1hxjtJ4pMPIfMmd_BX-em6YdEtRnHMW3RNw6VLWfgNss/gviz/tq?tqx=out:csv&sheet=products')
                 .then(response => response.text())
                 .then(csvText => {
                     // Remove BOM if present
