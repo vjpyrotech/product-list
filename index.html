@@ -92,6 +92,10 @@
             fetch('products.csv')
                 .then(response => response.text())
                 .then(csvText => {
+                    // Remove BOM if present
+                    if (csvText.charCodeAt(0) === 0xFEFF) {
+                        csvText = csvText.substring(1);
+                    }
                     Papa.parse(csvText, {
                         header: true,
                         complete: function(results) {
