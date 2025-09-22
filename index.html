@@ -116,7 +116,7 @@
                                 productRow.innerHTML = `
                                     <td class="index-number p-3 text-center font-bold text-amber-400">${product.id}</td>
                                     <td class="item-name p-3">${product.name}<br><span class="text-sm text-gray-400">${product.tamil_name}</span></td>
-                                    <td class="p-3 hidden md:table-cell">${product.min_order}</td>
+                                    <td class="min-order p-3 hidden md:table-cell">${product.min_order}</td>
                                     <td class="price p-3 text-center">${product.price}</td>
                                     <td class="p-3 text-center">
                                         <input type="number" class="qty w-16 bg-slate-200 text-slate-900 text-center rounded-md p-1" min="0" oninput="calculateTotal()">
@@ -143,8 +143,9 @@
                 const totalElement = row.querySelector('.total-cell');
                 const itemNameElement = row.querySelector('.item-name');
                 const indexElement = row.querySelector('.index-number');
+                const minOrderElement = row.querySelector('.min-order');
 
-                if (priceElement && qtyElement && totalElement && itemNameElement && indexElement) {
+                if (priceElement && qtyElement && totalElement && itemNameElement && indexElement && minOrderElement) {
                     const price = parseFloat(priceElement.textContent);
                     const qty = parseInt(qtyElement.value) || 0;
                     const total = price * qty;
@@ -155,7 +156,9 @@
                         hasItems = true;
                         const index = indexElement.textContent.trim();
                         const itemName = itemNameElement.innerText.split('\n')[0];
-                        orderMessage += `*${index}. ${itemName}*\n- Quantity: ${qty}\n\n`;
+                        const minOrder = minOrderElement.textContent.trim();
+                        const unit = minOrder.substring(minOrder.indexOf(' ') + 1);
+                        orderMessage += `*${index}. ${itemName}*\n- Quantity: *${qty}* (${unit})\n\n`;
                     }
                 }
             });
