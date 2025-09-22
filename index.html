@@ -157,7 +157,7 @@
                         const index = indexElement.textContent.trim();
                         const itemName = itemNameElement.innerText.split('\n')[0];
                         const minOrder = minOrderElement.textContent.trim();
-                        const unit = minOrder.substring(minOrder.indexOf(' ') + 1);
+                        const unit = minOrder.substring(minOrder);
                         orderMessage += `*${index}. ${itemName}*\n- Quantity: *${qty}* (${unit})\n\n`;
                     }
                 }
