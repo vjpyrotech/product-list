@@ -47,7 +47,7 @@
                     <tr>
                         <th class="p-1 sm:p-3 text-center">No.</th>
                         <th class="p-1 sm:p-3 text-left">Item Name</th>
-                        <th class="p-1 sm:p-3 text-left hidden md:table-cell">Min Order</th>
+                        <th class="p-1 sm:p-3 text-left">Min Order</th>
                         <th class="p-1 sm:p-3 text-center">Price</th>
                         <th class="p-1 sm:p-3 text-center">Qty</th>
                         <th class="p-1 sm:p-3 text-right">Total</th>
@@ -116,7 +116,7 @@
                                 productRow.innerHTML = `
                                     <td class="index-number p-1 sm:p-3 text-center font-bold text-amber-400">${product.id}</td>
                                     <td class="item-name p-1 sm:p-3">${product.name}<br><span class="text-sm text-gray-400">${product.tamil_name}</span></td>
-                                    <td class="min-order p-1 sm:p-3 hidden md:table-cell">${product.min_order}</td>
+                                    <td class="min-order p-1 sm:p-3">${product.min_order}</td>
                                     <td class="price p-1 sm:p-3 text-center">${product.price}</td>
                                     <td class="p-1 sm:p-3 text-center">
                                         <input type="number" class="qty w-16 bg-slate-200 text-slate-900 text-center rounded-md p-1" min="0" oninput="calculateTotal()">
